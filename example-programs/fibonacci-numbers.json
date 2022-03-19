@@ -1,0 +1,134 @@
+{
+  "commandList": [
+    {
+      "key": "numer",
+      "expression": {
+        "value": 10.0,
+        "type": "Liczba"
+      },
+      "type": "Przypisanie"
+    },
+    {
+      "condition": {
+        "argument1": {
+          "key": "numer",
+          "type": "Zmienna"
+        },
+        "argument2": {
+          "value": 2.0,
+          "type": "Liczba"
+        },
+        "type": "<="
+      },
+      "trueExpression": {
+        "commandList": [
+          {
+            "value": 1.0,
+            "type": "Liczba"
+          }
+        ],
+        "type": "Blok"
+      },
+      "falseExpression": {
+        "commandList": [
+          {
+            "key": "x1",
+            "expression": {
+              "value": 1.0,
+              "type": "Liczba"
+            },
+            "type": "Przypisanie"
+          },
+          {
+            "key": "x2",
+            "expression": {
+              "value": 1.0,
+              "type": "Liczba"
+            },
+            "type": "Przypisanie"
+          },
+          {
+            "key": "index",
+            "expression": {
+              "value": 3.0,
+              "type": "Liczba"
+            },
+            "type": "Przypisanie"
+          },
+          {
+            "condition": {
+              "argument1": {
+                "key": "index",
+                "type": "Zmienna"
+              },
+              "argument2": {
+                "key": "numer",
+                "type": "Zmienna"
+              },
+              "type": "<="
+            },
+            "expression": {
+              "commandList": [
+                {
+                  "key": "temp",
+                  "expression": {
+                    "argument1": {
+                      "key": "x1",
+                      "type": "Zmienna"
+                    },
+                    "argument2": {
+                      "key": "x2",
+                      "type": "Zmienna"
+                    },
+                    "type": "Plus"
+                  },
+                  "type": "Przypisanie"
+                },
+                {
+                  "key": "x1",
+                  "expression": {
+                    "key": "x2",
+                    "type": "Zmienna"
+                  },
+                  "type": "Przypisanie"
+                },
+                {
+                  "key": "x2",
+                  "expression": {
+                    "key": "temp",
+                    "type": "Zmienna"
+                  },
+                  "type": "Przypisanie"
+                },
+                {
+                  "key": "index",
+                  "expression": {
+                    "argument1": {
+                      "key": "index",
+                      "type": "Zmienna"
+                    },
+                    "argument2": {
+                      "value": 1.0,
+                      "type": "Liczba"
+                    },
+                    "type": "Plus"
+                  },
+                  "type": "Przypisanie"
+                }
+              ],
+              "type": "Blok"
+            },
+            "type": "While"
+          },
+          {
+            "key": "x2",
+            "type": "Zmienna"
+          }
+        ],
+        "type": "Blok"
+      },
+      "type": "If"
+    }
+  ],
+  "type": "Blok"
+}

@@ -1,0 +1,105 @@
+{
+  "commandList": [
+    {
+      "key": "a",
+      "expression": {
+        "value": 1989.0,
+        "type": "Liczba"
+      },
+      "type": "Przypisanie"
+    },
+    {
+      "key": "b",
+      "expression": {
+        "value": 867.0,
+        "type": "Liczba"
+      },
+      "type": "Przypisanie"
+    },
+    {
+      "condition": {
+        "argument": {
+          "argument1": {
+            "key": "a",
+            "type": "Zmienna"
+          },
+          "argument2": {
+            "value": 0.0,
+            "type": "Liczba"
+          },
+          "type": "=="
+        },
+        "type": "Not"
+      },
+      "expression": {
+        "commandList": [
+          {
+            "condition": {
+              "argument1": {
+                "key": "a",
+                "type": "Zmienna"
+              },
+              "argument2": {
+                "key": "b",
+                "type": "Zmienna"
+              },
+              "type": "<="
+            },
+            "expression": {
+              "commandList": [
+                {
+                  "key": "b",
+                  "expression": {
+                    "argument1": {
+                      "key": "b",
+                      "type": "Zmienna"
+                    },
+                    "argument2": {
+                      "key": "a",
+                      "type": "Zmienna"
+                    },
+                    "type": "Minus"
+                  },
+                  "type": "Przypisanie"
+                }
+              ],
+              "type": "Blok"
+            },
+            "type": "While"
+          },
+          {
+            "key": "temp",
+            "expression": {
+              "key": "a",
+              "type": "Zmienna"
+            },
+            "type": "Przypisanie"
+          },
+          {
+            "key": "a",
+            "expression": {
+              "key": "b",
+              "type": "Zmienna"
+            },
+            "type": "Przypisanie"
+          },
+          {
+            "key": "b",
+            "expression": {
+              "key": "temp",
+              "type": "Zmienna"
+            },
+            "type": "Przypisanie"
+          }
+        ],
+        "type": "Blok"
+      },
+      "type": "While"
+    },
+    {
+      "key": "b",
+      "type": "Zmienna"
+    }
+  ],
+  "type": "Blok"
+}

@@ -1,0 +1,16 @@
+{
+  "commandList": [
+    {
+      "argument1": {
+        "value": 7.0,
+        "type": "Liczba"
+      },
+      "argument2": {
+        "value": 8.0,
+        "type": "Liczba"
+      },
+      "type": "Plus"
+    }
+  ],
+  "type": "Blok"
+}
